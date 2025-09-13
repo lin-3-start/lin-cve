@@ -1,3 +1,7 @@
+
+
+
+
 ## Basic Information
 
 Vulnerability Vendor: Shenzhen Jixiang Tengda Technology Co., Ltd.
@@ -12,7 +16,7 @@ Affected Product Version: <= V16.03.07.52 (Latest Version)
 
 ## Vulnerability Overview
 
-A buffer overflow vulnerability has been discovered in the Tenda AC20 router. An attacker can trigger this vulnerability by sending a carefully crafted
+A buffer overflow vulnerability has been discovered in the Tenda AC23 router. An attacker can trigger this vulnerability by sending a carefully crafted
 
 HTTP POST message to the request path /goform/saveParentControlInfo, causing a denial of service (DoS) attack or even RCE.
 
