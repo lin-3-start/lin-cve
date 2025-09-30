@@ -1,4 +1,8 @@
-# Information
+## Submitter：林淦(Lingan) 罗熙(Luoxi)
+
+## Submitter unit：广州大学 (Guangzhou University)
+
+## Information
 
 
 
@@ -12,11 +16,11 @@
 
 **Firmware download address:** [AC21 升级软件_腾达Tenda官方网站](https://www.tenda.com.cn/material/show/3742)
 
-# Overview
+### Overview
 
 A buffer overflow vulnerability was discovered on the latest version of the Tenda AC21 router, V16.03.08.16, where an attacker sent a well-crafted http post packet to the request path /goform/WifiExtraSet, triggering a denial of service attack or even RCE, specifically via the function strcpy(tkip_aes, tkip_aes_1); because there is no bounds check on tkip_aes, causing a stack overflow
 
-# Vulnerability details
+## Vulnerability details
 
 It can be found that the values of the wl_mode and wifi_chkHz are taken here, and if the if judgment is met, you can enter the sub_45CD64 function
 
@@ -34,7 +38,7 @@ When wpapsk_crypto is not tkip&aes, the strcpy function will be triggered to cau
 
 ![](img/4.png)
 
-# POC
+## POC
 
 ```py
 import requests

@@ -1,4 +1,8 @@
-# Information
+## Submitter：林淦(Lingan) 罗熙(Luoxi)
+
+## Submitter unit：广州大学 (Guangzhou University)
+
+## Information
 
 
 
@@ -12,11 +16,11 @@
 
 **Firmware download address:** [download](https://www.h3c.com/cn/Home/Agreement//default.htm?t=H3C%20Magic%20%20B3%20V100R002%20%E7%89%88%E6%9C%AC%E8%BD%AF%E4%BB%B6%E5%8F%8A%E8%AF%B4%E6%98%8E%E4%B9%A6&s=3125484)
 
-# Overview
+## Overview
 
 H3C routers have been found to have a buffer overflow vulnerability. Magic B3 model have a serious buffer overflow vulnerability. This vulnerability can cause a buffer overflow by routing /goform/aspForm and correctly controlling the param field, resulting in a denial of service attack or even remote code execution. The vulnerability is specifically triggered by AddMacList.
 
-# Vulnerability details
+## Vulnerability details
 
 Here is the entry of the request function
 
@@ -26,7 +30,7 @@ There is no length limit when copying the format, which leads to buffer overflow
 
 ![](img/2.png)
 
-# POC
+## POC
 
 ```
 POST /goform/aspForm HTTP/1.1

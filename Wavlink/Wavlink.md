@@ -6,7 +6,15 @@ toc_number: true
 date: 2025/8/1 11:20:53 
 ---
 
-# 漏洞概述
+
+
+
+
+## **提交者：林淦 罗熙**
+
+## **提交者单位：广州大学**
+
+## 漏洞概述
 
 Wavlink是一家专注于网络设备和通信解决方案的公司，提供优质的路由器、扩展器和网络配件。其下的WAVLINK-NU516U1型号的固件，功能用于提供打印机服务器网卡，其管理后台存在命令注入漏洞，允许攻击者完成os命令执行。
 
@@ -18,7 +26,7 @@ https://docs.wavlink.xyz/Firmware/fm-516u1/
 
  
 
-# 代码审计
+## 代码审计
 
 对固件binwalk -Me [固件位置] 解包，找到wireless.cgi程序，使用ida打开
 
@@ -50,7 +58,7 @@ sub_4032E4函数内，获取了Guest_ssid参数值，该值可以post传参可�
 
 此处反编译代码中，system函数参数显示为空，但在汇编代码中仍然可以判断出其参数为v8
 
-# POC
+## POC
 
 ```shell
 POST /cgi-bin/wireless.cgi HTTP/1.1

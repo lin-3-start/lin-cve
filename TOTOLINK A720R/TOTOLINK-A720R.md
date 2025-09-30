@@ -1,4 +1,8 @@
-# Information
+## Submitter：林淦(Lingan) 罗熙(Luoxi)
+
+## Submitter unit：广州大学 (Guangzhou University)
+
+## Information
 
 
 
@@ -12,11 +16,11 @@
 
 **Firmware download address:** [TOTOLINK](https://www.totolink.net/home/menu/detail/menu_listtpl/download/id/203/ids/36.html)
 
-# Overview
+## Overview
 
 A critical buffer overflow vulnerability was found on the TOTOLINK A720R router due to strcpy(dest, src); The failure to perform the necessary boundary checks results in a buffer overflow vulnerability that allows an attacker to perform a denial-of-service attack or even arbitrary command execution by sending malicious HTTP POST packets
 
-# Vulnerability details
+## Vulnerability details
 
 When the request path is setParentalRules, the corresponding function sub_41AAD8
 
@@ -26,7 +30,7 @@ It can be found that there is a buffer overflow vulnerability here, but the prec
 
 ![](img/2.png)
 
-# POC
+## POC
 
 ```
 POST /cgi-bin/cstecgi.cgi HTTP/1.1

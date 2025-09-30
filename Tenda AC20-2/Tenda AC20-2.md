@@ -1,4 +1,10 @@
-# Information
+
+
+## Submitter：林淦(Lingan) 罗熙(Luoxi)
+
+## Submitter unit：广州大学 (Guangzhou University)
+
+## Information
 
 
 
@@ -12,11 +18,11 @@
 
 **Firmware download address:** [tenda.com.cn/material/show/3264](https://www.tenda.com.cn/material/show/3264)
 
-# Overview
+## Overview
 
 A buffer overflow vulnerability was discovered on the latest version of the Tengda AC20 router, V16.03.08.12, where an attacker sent a well-constructed http post packet to the request path /goform/saveParentControlInfo, triggering a denial of service attack or even RCE, specifically via the function strcpy(s + 2, var); triggered, the reason is because there is no boundary check on var
 
-# Vulnerability details
+## Vulnerability details
 
 The prerequisite is that the function is called saveParentControlInfo
 
@@ -26,7 +32,7 @@ Here the two fields are valued deviceId, deviceName, and then the function compa
 
 ![](img/2.png)
 
-# POC
+## POC
 
 ```
 POST /goform/saveParentControlInfo HTTP/1.1

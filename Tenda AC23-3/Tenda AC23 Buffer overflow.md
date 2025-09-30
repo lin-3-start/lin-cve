@@ -1,4 +1,8 @@
-# Information
+## Submitter：林淦(Lingan) 罗熙(Luoxi)
+
+## Submitter unit：广州大学 (Guangzhou University)
+
+## Information
 
 **Vendor of the products:**   Shenzhen Tenda Technology Co.,Ltd.
 
@@ -10,11 +14,11 @@
 
 **Firmware download address:** [AC23 升级软件_腾达Tenda官方网站](https://www.tenda.com.cn/material/show/3889)
 
-# Overview
+## Overview
 
 A buffer overflow vulnerability was discovered on the latest version of the Tengda AC23 router, V16.03.07.52, where an attacker sent a well-crafted http post packet to the request path /goform/SetPptpServerCfg, triggering a denial of service attack or even RCE, specifically via the function sscanf(s, "%[^.].%[^.].%[^.].%s", v10, v11, v12, &v12[8]) because there is no bounds check on s, causing a stack overflow
 
-# Vulnerability details
+## Vulnerability details
 
 It can be found that when the serverEn value is 1, it will enter the else branch to call sub_478E94 function
 
@@ -24,7 +28,7 @@ When the startIp and endIp are not empty, the sscanf function causes the buffer 
 
 ![](img/2.png)
 
-# POC
+## POC
 
 ```
 POST /goform/SetPptpServerCfg HTTP/1.1
