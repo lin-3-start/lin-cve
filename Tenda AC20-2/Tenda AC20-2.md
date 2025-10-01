@@ -1,5 +1,7 @@
 
 
+# CVE-2025-8940
+
 ## Submitter：林淦(Lingan) 罗熙(Luoxi)
 
 ## Submitter unit：广州大学 (Guangzhou University)
